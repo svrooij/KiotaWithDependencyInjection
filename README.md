@@ -93,7 +93,7 @@ builder.Services.AddHttpClient<SpotifyFactory>((sp, client) =>
 - `SpotifyServiceCollectionExtensions` static class that adds the `.AddSpotifyClient` extension method to the `IServiceCollection` to register the Spotify client.
 - `SpotifySettings` class that holds the settings required to talk to Spotify, which are validated at startup.
 
-## SpotifyController [source](./KiotaWithDependencyInjection/Controllers/SpotifyController.cs)]
+## SpotifyController [source](./KiotaWithDependencyInjection/Controllers/SpotifyController.cs)
 
 This is the controller that demonstrates how to use the Spotify client, it is injected in the constructor (as you would do with any other dependency) and used in several methods.
 
