@@ -1,4 +1,4 @@
-# Using Kiota with Microsoft.Extensions.DependencyInjection
+# Using Kiota with Dependency Injection
 
 This sample demonstrates how to use [Kiota](https://learn.microsoft.com/en-us/openapi/kiota/overview?wt.mc_id=SEC-MVP-5004985)_ with [Microsoft.Extensions.DependencyInjection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection?wt.mc_id=SEC-MVP-5004985).
 
@@ -26,14 +26,14 @@ No need to worry, the project will throw an error if you forgot this step.
 
 ## Project structure
 
-- `KiotaWithDependencyInjection` is the main project that demonstrates how to use Kiota with Microsoft.Extensions.DependencyInjection.
-- `Spotify` contains the generated code from the Spotify API OpenAPI specification.
+- `KiotaWithDependencyInjection` [source](./KiotaWithDependencyInjection) is the main project that demonstrates how to use Kiota with Microsoft.Extensions.DependencyInjection.
+- `Spotify` [source](./Spotify) contains the generated code from the Spotify API OpenAPI specification.
 
 ## KiotaWithDependencyInjection
 
 This project is where the magic happens.
 
-### Kiota folder
+### Kiota folder [source](./KiotaWithDependencyInjection/Kiota)
 
 In the `Kiota` folder, you will find the `KiotaServiceCollectionExtensions` class, which contains the extension methods to register the Kiota handlers in the `IServiceCollection`.
 Be sure to call the `AddKiotaHandlers` method in the `Program.cs` file to register the Kiota handlers, this needs to be called only once, even if you use multiple Kiota clients.
@@ -85,7 +85,7 @@ builder.Services.AddHttpClient<SpotifyFactory>((sp, client) =>
   .AddHttpMessageHandler<HeadersInspectionHandler>();
 ```
 
-### Spotify folder
+### Spotify folder [source](./KiotaWithDependencyInjection/Spotify)
 
 - `AccessTokenResult` model that is used to parse the access token response from the spotify api.
 - `SpotifyAccessTokenProvider` class that is responsible for getting the access token from the Spotify API and attaching it to the request.
@@ -93,7 +93,7 @@ builder.Services.AddHttpClient<SpotifyFactory>((sp, client) =>
 - `SpotifyServiceCollectionExtensions` static class that adds the `.AddSpotifyClient` extension method to the `IServiceCollection` to register the Spotify client.
 - `SpotifySettings` class that holds the settings required to talk to Spotify, which are validated at startup.
 
-## SpotifyController
+## SpotifyController [source](./KiotaWithDependencyInjection/Controllers/SpotifyController.cs)]
 
 This is the controller that demonstrates how to use the Spotify client, it is injected in the constructor (as you would do with any other dependency) and used in several methods.
 
