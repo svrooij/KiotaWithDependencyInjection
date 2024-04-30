@@ -1,0 +1,27 @@
+{
+  "descriptionHash": "6C8D68A73B8991192F96723DDD71054A6754F1CC398CC1B5A3AC52B908C71C880F724165C1C1DF1FA210EAAC6D4CE7BC196D11C4E45094256BE48B5213749D83",
+  "descriptionLocation": "https://api.apis.guru/v2/specs/spotify.com/1.0.0/openapi.json",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.13.0",
+  "clientClassName": "SpotifyClient",
+  "clientNamespaceName": "Spotify",
+  "language": "CSharp",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": false,
+  "includeAdditionalData": true,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}

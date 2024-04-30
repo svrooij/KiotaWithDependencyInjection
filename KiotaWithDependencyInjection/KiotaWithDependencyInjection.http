@@ -1,0 +1,6 @@
+@KiotaWithDependencyInjection_HostAddress = http://localhost:5285
+
+GET {{KiotaWithDependencyInjection_HostAddress}}/spotify/search?query=eminem
+Accept: application/json
+
+###
